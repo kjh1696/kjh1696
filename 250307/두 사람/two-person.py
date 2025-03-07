@@ -12,3 +12,5 @@ sex2 = str(p2[1])
 
 if (age1 >= 19 and sex1 == "M") or (age2 >= 19 and sex2 == "M"):
     print(f"1")
+else:
+    print(f"0")
