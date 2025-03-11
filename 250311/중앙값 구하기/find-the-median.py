@@ -7,9 +7,8 @@ t = int(numbers[2])
 
 if (f >= s and f <= t) or (f >= t and f <= s):
     print(f"{f}")
+    elif (s >= f and s <= t) or (s >= f and s <= t):
+        print(f"{s}")
+        elif (t >= f and t <= s) or (t >= f and t <= s):
+              print(f"{t}")
 
-if (s >= f and s <= t) or (s >= f and s <= t):
-    print(f"{s}")
-
-if (t >= f and t <= s) or (t >= f and t <= s):
-    print(f"{t}")
