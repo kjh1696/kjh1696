@@ -3,7 +3,7 @@ A = arr[0]
 B = arr[1]
 
 num = [0] * A
-while A >= 1:
+while A > 1:
     num[A%B] = num[A%B] + 1
     A = int(A / B)
 
