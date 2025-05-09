@@ -2,11 +2,13 @@ arr_first = list(map(int, input().split()))
 arr_second = list(map(int, input().split()))
 
 for i in range(arr_first[0]):
-
     arr = list(map(int, input().split()))
 
     if arr[0] == 1:
-        print(f"{arr_second[arr[1]-1]}")
+        if 1 <= arr[1] <= len(arr_second):
+            print(f"{arr_second[arr[1]-1]}")
+        else:
+            print("Invalid index")
 
     elif arr[0] == 2:
         for j in range(len(arr_second)):
@@ -15,9 +17,10 @@ for i in range(arr_first[0]):
                 break
         else:
             print(f"0")
-            print()
 
     elif arr[0] == 3:
-        for k in range(arr[1]-1 , arr[2]):
-            print(f"{arr_second[k]}", end = " ")
-        print()  
+        start = max(arr[1] - 1, 0)
+        end = min(arr[2], len(arr_second))
+        for k in range(start, end):
+            print(f"{arr_second[k]}", end=" ")
+        print()
