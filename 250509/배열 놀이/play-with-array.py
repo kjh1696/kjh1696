@@ -3,10 +3,8 @@ arr_second = list(map(int, input().split()))
 
 for i in range(arr_first[0]):
 
-    try:
-        arr = list(map(int, input().split()))
-    except EOFError:
-        break  # 입력 끝나면 안전하게 탈출
+    arr = input()
+    arr = list(map(int, arr.split()))
 
     if arr[0] == 1:
         print(f"{arr_second[arr[1]-1]}")
