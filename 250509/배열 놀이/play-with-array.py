@@ -1,26 +1,19 @@
-arr_first = list(map(int, input().split()))
-arr_second = list(map(int, input().split()))
+n, q = map(int, input().split()) # n: 원소갯수, q: 질의개수
+nn = list(map(int, input().split())) # n개의 원소 리스트
 
-for i in range(arr_first[0]):
-    arr = list(map(int, input().split()))
-
-    if arr[0] == 1:
-        if 1 <= arr[1] <= len(arr_second):
-            print(f"{arr_second[arr[1]-1]}")
-        else:
-            print("Invalid index")
-
-    elif arr[0] == 2:
-        for j in range(len(arr_second)):
-            if arr[1] == arr_second[j]:
-                print(f"{j+1}")
+for i in range(q): # q개의 질의를 반복
+    qq = list(map(int, input().split()))
+    que = qq[0] # que: 질의 번호
+    if que == 1: # 1번 답변: a번째 원소
+        print(nn[qq[1] - 1]) 
+    elif que == 2: # 2번 답변: 값이 b인 원소의 index / else 0
+        for j in range(n):
+            if nn[j] == qq[1]:
+                print(j + 1)
                 break
         else:
-            print(f"0")
-
-    elif arr[0] == 3:
-        start = max(arr[1] - 1, 0)
-        end = min(arr[2], len(arr_second))
-        for k in range(start, end):
-            print(f"{arr_second[k]}", end=" ")
-        print()
+            print(0)
+    else: # 3번 답변: nn의 s번째부터 e번째까지
+        for j in range(qq[1] - 1, qq[2]):
+            print(nn[j], end = " ")
+            print()
