@@ -15,10 +15,9 @@ for i in range(arr_first[0]):
                 break
         else:
             print(f"0")
-            print()
+
 
     elif arr[0] == 3:
-        print()
         for k in range(arr[1]-1 , arr[2]):
             print(f"{arr_second[k]}", end = " ")
 
