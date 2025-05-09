@@ -1,7 +1,7 @@
 arr_first = list(map(int, input().split()))
 arr_second = list(map(int, input().split()))
 
-for i in range(arr_first[0]):
+for i in range(1,arr_first[0]):
 
     arr = input()
     arr = list(map(int, arr.split()))
